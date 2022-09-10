@@ -1,8 +1,11 @@
+import { Box, Stack } from "@mui/material";
 import React from "react";
 import "./App.css";
 import Feed from "./components/Feed";
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
+import Rightbar from "./components/Rightbar";
+import Add from "./components/Add";
 
 function App() {
   /*const BlueButton = styled(Button)({
@@ -19,11 +22,15 @@ function App() {
   });*/
 
   return (
-    <div>
-      <Feed/>
-      <Navbar/>
-      <Sidebar/>
-    </div>
+    <Box>
+      <Navbar />
+      <Stack direction="row" alignContent="center">
+        <Sidebar />
+        <Feed />
+        <Rightbar />
+      </Stack>
+      <Add />
+    </Box>
   );
 }
 
